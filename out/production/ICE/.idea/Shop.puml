@@ -1,0 +1,68 @@
+@startuml
+class Shop {
+main()
+}
+
+class Product{
+- String name
+- int id
+- double price
++ getPrice()
++ getID()
++ getName()
+}
+
+class Customer{
+- String userName
+- String password
++ createAccount()
++ checkuserName()
++ checkPassword()
+}
+
+class ShoppingCart{
+- List<Product> CartItems
++ addproduct()
++ viewCart()
++ calculateTotal()
++ checkout()
+}
+
+
+class Orders {
+-List <Product> products
+- int OrderId
+-  double totalPrice
+- localDateTime orderDate
++ getProducts()
++ getOrderId()
++ getTotalPrice()
++ getOrderDate()
++ toString()
+}
+
+
+class OrderHandler{
+- List<Orders> orderHistory
+- int nextOrderId
++ addOrder()
++ viewOrderHistory()
+}
+
+class ProductReader{
+
+}
+
+Shop *-- Product
+Shop *-- Customer
+Customer *-- Orders
+Product -- ShoppingCart
+Customer *-- ShoppingCart
+Orders -- OrderHandler
+Product -- ProductReader
+
+
+
+
+
+@enduml

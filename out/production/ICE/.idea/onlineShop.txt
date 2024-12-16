@@ -1,0 +1,6 @@
+Name; price; ID
+Laptop; 7999; 2333
+Smartphone; 4000; 2334
+airpods;1299; 2335
+charger; 699; 2336
+Playstatiom; 899; 2337
